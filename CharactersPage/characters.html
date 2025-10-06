@@ -30,7 +30,106 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 
     <!-- CSS Script -->
-    <link rel="stylesheet" href="./Homepage/home.css" />
+    <link rel="stylesheet" href="./characters.css" />
+    <link rel="stylesheet" href="../Homepage/home.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JavaScrip Generated Navigation Bar -->
+    <header>
+      <section id="navigation-bar">
+        <nav>
+          <!-- Simpsons Logo -->
+          <h1 class="logo">
+            <span class="top-text">D’OH</span><br />
+            <span class="bottom-text">SPRINGFIELD</span>
+          </h1>
+
+          <!-- Menu container for JS-generated menu -->
+          <aside
+            id="menu-container"
+            role="navigation"
+            aria-label="Main Menu"
+          ></aside>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <section id="charactersBox">
+        <!-- Left Arrow -->
+        <aside id="leftArrow">
+          <i class="fa-regular fa-circle-left"></i>
+        </aside>
+
+        <!-- Character Content -->
+        <section id="characterContent">
+          <!-- Character Image -->
+          <figure id="characterImage">
+            <img src="../images/Homer.webp" alt="Homer Simpson" />
+          </figure>
+
+          <!-- Character Bio -->
+          <section id="characterBio">
+            <h1 id="name">Homer Simpson</h1>
+            <p>
+              Homer Jay Simpson (born May 12,1956) is the main protagonist of
+              the Simpsons series or show. He is the spouse of Marge Simpson and
+              a father of Bart, Lisa, and Maggie Simpson. Homer is overweight,
+              weighing 239 pounds, he is defined as a lazy character and often
+              ignorant to the world around him. Although Homer has many flaws,
+              he has shown to have a great caring love, and even bravery to
+              those he cares about and sometimes, even others he doesn’t. He
+              also serves as the main protagonist of “The Simpsons Movie”. Homer
+              Simpson is in his late 30s and early 40s.
+            </p>
+          </section>
+        </section>
+
+        <!-- Right Arrow -->
+        <aside id="rightArrow">
+          <i class="fa-regular fa-circle-right"></i>
+        </aside>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="icons">
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/thesimpsonsfan/?hl=en"
+          target="_blank"
+          aria-label="Instagram Page Link"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <!-- Youtube -->
+        <a
+          href="https://www.youtube.com/@officialnancycartwright/videos"
+          target="_blank"
+          aria-label="Youtube Page Link"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <!-- Twitter -->
+
+        <a
+          href="https://x.com/TheSimpsons/highlights"
+          target="_blank"
+          aria-label="Twitter Page Link"
+        >
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+
+      <p>Copyright@2025 - Designed by Mbali Sithebe</p>
+    </footer>
+
+    <!-- JavaScript Imports -->
+    <script src="../src/app.js"></script>
+    <script src="../src/d3.json"></script>
+    <script src="../src/nav.js"></script>
+  </body>
 </html>
