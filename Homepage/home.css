@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Rubik+Doodle+Shadow&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: Quicksand, sans-serif;
+}
+
+body {
+  background-color: #ffedfa;
+}
+
+/********************************  Nav Menu  ********************************/
+
+#navigation-bar nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 0 7.5rem;
+}
+
+#menu-container ul.menu {
+  display: flex;
+  list-style: none;
+  gap: 7rem;
+  justify-content: center;
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#menu-container ul.menu li.menu-item a {
+  text-decoration: none;
+  color: #0f0e0e;
+}
+
+#menu-container ul.menu li.menu-item.active {
+  color: #0392dd;
+}
+
+#menu-container ul.menu li.menu-item a:hover {
+  color: #0392dd;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 0.5;
+  cursor: pointer;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.logo .top-text,
+.logo .bottom-text {
+  font-size: 1.9rem;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 550;
+  color: #ffe100;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  -webkit-text-stroke: 1.5px #0392dd;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/********************************  Main Section  ********************************/
+
+#info-box {
+  background-color: #f8db27;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 3rem auto 0 auto;
+  max-width: 1200px;
+  min-height: 450px;
+}
+
+#textContent {
+  flex: 1;
+  max-width: 550px;
+}
+
+#textContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2.3rem;
+  font-family: "Quicksand", sans-serif;
+  color: #0f0e0e;
+}
+
+#textContent p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2.3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #0f0e0e;
+}
+
+#Btns {
+  display: flex;
+  gap: 1.3rem;
+  margin-top: 1.5rem;
+}
+
+#Btns button {
+  background-color: #0392dd;
+  color: whitesmoke;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#Btns button:hover {
+  transform: scale(1.05);
+  background-color: #0277c3;
+}
+
+#image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/********************************  Footer Section  ********************************/
+
+footer {
+  background-color: #2eb3f4;
+  text-align: center;
+  padding: 1rem 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #0f0e0e;
+  margin-top: 3rem;
+}
+
+footer .icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+footer .icons a i {
+  font-size: 1.3rem;
+  color: whitesmoke;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+footer .icons a i:hover {
+  transform: scale(1.2);
+  color: #ffd900; 
+}
+
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 580;
+  color: whitesmoke;
+}
