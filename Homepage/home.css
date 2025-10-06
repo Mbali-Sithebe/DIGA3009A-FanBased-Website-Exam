@@ -94,7 +94,7 @@ body {
 }
 
 #textContent p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: 2.3rem;
   font-family: "Poppins", sans-serif;
@@ -157,19 +157,18 @@ footer .icons {
 
 footer .icons a i {
   font-size: 1.3rem;
-  color: whitesmoke;
+  color: #0f0e0e;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 footer .icons a i:hover {
   transform: scale(1.2);
-  color: #ffd900; 
+  color: #ffd900;
 }
-
 
 footer p {
   margin: 0;
   font-size: 1rem;
   font-weight: 580;
-  color: whitesmoke;
+  color: #0f0e0e;
 }

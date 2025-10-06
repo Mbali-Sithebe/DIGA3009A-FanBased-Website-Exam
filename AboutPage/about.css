@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Rubik+Doodle+Shadow&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: Quicksand, sans-serif;
+}
+
+body {
+  background-color: #ffedfa;
+}
+
+/********************************  About Content  ********************************/
+
+#simpsonsContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 7rem;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+#textHolder {
+  flex: 1 1 45%;
+}
+
+#textHolder h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2.3rem;
+  font-family: "Quicksand", sans-serif;
+  color: #0f0e0e;
+}
+
+#textHolder p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2.3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #0f0e0e;
+}
+
+#simpsonsContent #image {
+  flex: 1 1 45%;
+}
+
+#simpsonsContent #image img {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
