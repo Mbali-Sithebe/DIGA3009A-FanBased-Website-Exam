@@ -19,14 +19,17 @@ body {
   justify-content: space-between;
   padding: 2rem 7rem;
   gap: 2rem;
-  margin-top: 4rem; 
+  margin-top: 4rem;
 }
-
 
 #leftArrow,
 #rightArrow {
-  font-size: 3rem; 
-  color: #0392dd; 
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #0392dd;
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -34,45 +37,77 @@ body {
 #leftArrow:hover,
 #rightArrow:hover {
   transform: scale(1.2);
-  color: #ffd900; 
+  color: #ffd900;
 }
-
 
 #characterContent {
   display: flex;
   align-items: flex-start;
   gap: 3rem;
-  flex: 1; 
+  flex: 1;
 }
 
+#characterImage {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 #characterImage img {
-  width: 400px; 
+  width: 100%;
   height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  image-rendering: auto;
+  display: block;
 }
-
 
 #characterBio {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 600px; 
+  max-width: 600px;
   margin-top: 3rem;
 }
-
 
 #characterBio h1 {
   font-family: "Luckiest Guy", cursive;
   font-size: 2.5rem;
-  color: #ffd900; 
+  color: #ffd900;
   font-weight: 500;
-  
 }
-
 
 #characterBio p {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   color: #0f0e0e;
   line-height: 1.6;
+}
+
+/********************************  Last Characters Content Page ********************************/
+
+#characterContent.special-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.9rem; 
+  margin-top: -4rem; 
+  padding-top: 0;
+}
+
+#characterContent.special-layout #characterImage img {
+  margin-left: 2rem; 
+  max-width: 1000px; 
+  height: auto;
+}
+
+#characterContent.special-layout #characterBio {
+  order: 0;
+}
+
+#characterContent.special-layout #characterImage {
+  order: 1;
 }

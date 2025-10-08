@@ -56,10 +56,10 @@ body {
 
 .logo .top-text,
 .logo .bottom-text {
-  font-size: 1.9rem;
+  font-size: 1.95rem;
   font-family: "Luckiest Guy", cursive;
   font-weight: 550;
-  color: #ffe100;
+  color: #f8db27;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   -webkit-text-stroke: 1.5px #0392dd;
@@ -145,7 +145,7 @@ footer {
   padding: 1rem 1rem;
   font-family: "Poppins", sans-serif;
   color: #0f0e0e;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
 }
 
 footer .icons {

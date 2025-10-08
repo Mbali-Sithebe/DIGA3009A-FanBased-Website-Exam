@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Homer Simpson",
+    "img": "../images/Homer.webp",
+    "bio": "Homer Jay Simpson (born May 12,1956) is the main protagonist of the Simpsons series or show. He is the spouse of Marge Simpson and a father of Bart, Lisa, and Maggie Simpson. Homer is overweight, weighing 239 pounds, he is defined as a lazy character and often ignorant to the world around him. Although Homer has many flaws, he has shown to have a great caring love, and even bravery to those he cares about and sometimes, even others he doesn’t. He also serves as the main protagonist of “The Simpsons Movie”. Homer Simpson is in his late 30s and early 40s."
+  },
+  {
+    "name": "Marge Simpson",
+    "img": "../images/MargeSimpsons.png",
+    "bio": "Marjorie Jacqueline ‘Marge’ Simpson is the homemaker and matriarch of the Simpson family. She is also one of the five main characters in the Simpsons TV series. Marge Simpson is 36 years old. She and her husband Homer have 3 children, Bart, Lisa, and Maggie. Marge is the moralist force in her family and often provides a grounding voice during her family antics by trying to maintain order in the Simpson household. Aside from her duties at home, Marge has flirted briefly with several careers ranging from a police officer to an anti-violence activist."
+  },
+  {
+    "name": "Bart Simpson",
+    "img": "../images/Bart.png",
+    "bio": "Bartholomew Bart Simpson is the mischievous 10-year-old son of Homer and Marge and the older brother of Lisa and Maggie. Known for his rebellious and troublemaking nature, Bart often finds himself in trouble but has also achieved notable feats, like discovering a comet (named after him) and winning an award for his Angry Dad web series. He has also starred in his own comic series, Simpson Comics Presents Bart Simpson, and appeared on numerous comic covers. Despite his antics, Bart remains one of the most iconic and beloved characters in The Simpsons."
+  },
+  {
+    "name": "Lisa Simpson",
+    "img": "../images/Lisa.png",
+    "bio": "Lisa Marie Simpson is the 8-year-old middle child of the Simpson family and one of the show’s moral centers. Known for her exceptional intelligence (with an IQ of 159) and talents like playing the saxophone and guitar, Lisa often feels misunderstood due to her advanced abilities and lack of parental involvement. Despite being viewed as a geeky overachiever at school, she remains determined and focused on reaching her potential. Lisa’s rational thinking and strong moral compass make her a voice of reason in her family, though she occasionally struggles with jealousy and the need to prove herself as the smartest."
+  },
+  {
+    "name": "Maggie Simpson",
+    "img": "../images/Maggie.png",
+    "bio": "Maggie Simpson is the baby of the family. She rarely speaks but is known for her pacifier and adorable mannerisms. Despite her age, Maggie has shown remarkable intelligence and bravery throughout the series, including saving her father’s life on multiple occasions. She represents innocence and is often the silent observer of the family’s chaos."
+  },
+  {
+    "name": "All Simpsons Characters",
+    "img": "../images/AllCharacaters.png",
+    "bio": "A group image showcasing the entire Simpson family together."
+  }
+]

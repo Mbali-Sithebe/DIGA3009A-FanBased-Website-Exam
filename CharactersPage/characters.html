@@ -10,9 +10,16 @@
     <meta name="description" content="The Simpsons FanBased Website" />
     <meta name="author" content="Mbali Sithebe" />
 
-    <title>Home</title>
+    <title>Characters</title>
 
     <!-- Fav Icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/Icon.png"
+      sizes="32x32"
+      type="image/png"
+    />
 
     <!-- Font Awesome -->
     <link
@@ -57,9 +64,9 @@
     <main>
       <section id="charactersBox">
         <!-- Left Arrow -->
-        <aside id="leftArrow">
+        <button id="leftArrow" aria-label="Previous Character">
           <i class="fa-regular fa-circle-left"></i>
-        </aside>
+        </button>
 
         <!-- Character Content -->
         <section id="characterContent">
@@ -86,9 +93,9 @@
         </section>
 
         <!-- Right Arrow -->
-        <aside id="rightArrow">
+        <button id="rightArrow" aria-label="Next Character">
           <i class="fa-regular fa-circle-right"></i>
-        </aside>
+        </button>
       </section>
     </main>
 
@@ -129,7 +136,6 @@
 
     <!-- JavaScript Imports -->
     <script src="../src/app.js"></script>
-    <script src="../src/d3.json"></script>
     <script src="../src/nav.js"></script>
   </body>
 </html>
