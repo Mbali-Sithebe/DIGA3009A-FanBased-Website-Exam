@@ -11,6 +11,17 @@ body {
   background-color: #ffedfa;
 }
 
+#navigation-bar nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fcbfc7;
+  padding: 1.5rem 4rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 2rem auto;
+}
 /********************************  Characters Content  ********************************/
 
 #charactersBox {
