@@ -30,8 +30,9 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- GSAP For Animation -->
+    <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 
     <!-- Axios [for API calls] -->
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
@@ -61,41 +62,55 @@
       </section>
     </header>
 
+    <section class="text">
+      <aside class="textsHeadings">
+        <h1>Characters</h1>
+        <p>
+          Meet the Simpsons family and their friends! From the mischievous
+          antics of Bart and Lisa to Marge’s caring guidance and Homer’s
+          hilarious adventures, explore the world of Springfield. Discover all
+          your favourite characters and learn more about their stories and
+          quirks!
+        </p>
+      </aside>
+    </section>
+
     <main>
-      <section id="charactersBox">
-        <!-- Left Arrow -->
-        <button id="leftArrow" aria-label="Previous Character">
-          <i class="fa-regular fa-circle-left"></i>
-        </button>
+      <section class="gallery">
+        <ul class="cards">
+          <!-- JS will populate these <li> cards with character images -->
+          <li
+            style="background-image: url('../images/Homer.webp')"
+            data-index="0"
+          ></li>
+          <li
+            style="background-image: url('../images/MargeSimpsons.png')"
+            data-index="1"
+          ></li>
+          <li
+            style="background-image: url('../images/Bart.png')"
+            data-index="2"
+          ></li>
 
-        <!-- Character Content -->
-        <section id="characterContent">
-          <!-- Character Image -->
-          <figure id="characterImage">
-            <img src="../images/Homer.webp" alt="Homer Simpson" />
-          </figure>
+          <li
+            style="background-image: url('../images/Lisa.png')"
+            data-index="3"
+          ></li>
+          <li
+            style="background-image: url('../images/Maggie.png')"
+            data-index="4"
+          ></li>
+        </ul>
 
-          <!-- Character Bio -->
-          <section id="characterBio">
-            <h1 id="name">Homer Simpson</h1>
-            <p>
-              Homer Jay Simpson (born May 12,1956) is the main protagonist of
-              the Simpsons series or show. He is the spouse of Marge Simpson and
-              a father of Bart, Lisa, and Maggie Simpson. Homer is overweight,
-              weighing 239 pounds, he is defined as a lazy character and often
-              ignorant to the world around him. Although Homer has many flaws,
-              he has shown to have a great caring love, and even bravery to
-              those he cares about and sometimes, even others he doesn’t. He
-              also serves as the main protagonist of “The Simpsons Movie”. Homer
-              Simpson is in his late 30s and early 40s.
-            </p>
-          </section>
-        </section>
-
-        <!-- Right Arrow -->
-        <button id="rightArrow" aria-label="Next Character">
-          <i class="fa-regular fa-circle-right"></i>
-        </button>
+        <!-- Functional arrow buttons -->
+        <div class="actions">
+          <button id="leftArrow" aria-label="Previous Character">
+            <i class="fa-regular fa-circle-left"></i>
+          </button>
+          <button id="rightArrow" aria-label="Next Character">
+            <i class="fa-regular fa-circle-right"></i>
+          </button>
+        </div>
       </section>
     </main>
 
@@ -135,7 +150,7 @@
     </footer>
 
     <!-- JavaScript Imports -->
-    <script src="../src/app.js"></script>
+    <script src="../CharactersPage/characters.js"></script>
     <script src="../src/nav.js"></script>
   </body>
 </html>
