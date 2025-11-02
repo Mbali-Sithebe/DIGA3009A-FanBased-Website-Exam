@@ -7,7 +7,7 @@ const menuItems = [
   { name: "Characters", href: "CharactersPage/characters.html" },
   { name: "Episodes", href: "EpisodesPage/episodes.html" },
   { name: "Adaptation", href: "AdaptationPage/adaptation.html" },
-  { name: "CharactersPhrases", href: "CharactersPhrases/charactersPhr.html" },
+  { name: "CharactersPhrases", href: "CharactersPhrases/charactersPhr.html" }, // hidden page
 ];
 
 // Function to generate the nav menu
@@ -17,6 +17,9 @@ function initialiseMenu(currentPage) {
   ul.classList.add("menu");
 
   for (let menuItem of menuItems) {
+    // Skip CharactersPhrases — keep it hidden from the nav
+    if (menuItem.name === "CharactersPhrases") continue;
+
     const li = document.createElement("li");
     li.classList.add("menu-item");
 
@@ -24,7 +27,7 @@ function initialiseMenu(currentPage) {
       const a = document.createElement("a");
       a.innerText = menuItem.name;
 
-      // Adjust relative path if current page is inside a subfolder
+      // Adjust relative path for subfolders
       let relativeHref = menuItem.href;
       if (
         window.location.pathname.includes("/AboutPage/") ||
