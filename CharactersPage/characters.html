@@ -7,19 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <meta name="keywords" content="HTML, CSS, JavaScript, APIs" />
-    <meta name="description" content="The Simpsons FanBased Website" />
+    <meta name="description" content="The Simpsons Fan-Based Website" />
     <meta name="author" content="Mbali Sithebe" />
 
     <title>Characters</title>
 
     <!-- Fav Icon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/Icon.png"
-      sizes="32x32"
-      type="image/png"
-    />
+    <link rel="icon" type="image/png" href="./images/Icon.png" sizes="32x32" />
 
     <!-- Font Awesome -->
     <link
@@ -38,11 +32,15 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 
     <!-- CSS Script -->
-    <link rel="stylesheet" href="./characters.css" />
-    <link rel="stylesheet" href="../Homepage/home.css" />
+    <link rel="stylesheet" href="../CharactersPage/characters.css" />
+    <link rel="stylesheet" href="../HomePage/home.css" />
   </head>
+
   <body class="characters">
-    <!-- JavaScrip Generated Navigation Bar -->
+    <div class="blurred-bg"></div>
+    <div class="blurred-overlay"></div>
+
+    <!-- Navigation Bar -->
     <header>
       <section id="navigation-bar">
         <nav>
@@ -62,57 +60,258 @@
       </section>
     </header>
 
-    <section class="text">
-      <aside class="textsHeadings">
-        <h1>Characters</h1>
-        <p>
-          Meet the Simpsons family and their friends! From the mischievous
-          antics of Bart and Lisa to Marge’s caring guidance and Homer’s
-          hilarious adventures, explore the world of Springfield. Discover all
-          your favourite characters and learn more about their stories and
-          quirks!
-        </p>
-      </aside>
-    </section>
-
+    <!-- Main Content -->
     <main>
-      <section class="gallery">
-        <ul class="cards">
-          <!-- JS will populate these <li> cards with character images -->
-          <li
-            style="background-image: url('../images/Homer.webp')"
-            data-index="0"
-          ></li>
-          <li
-            style="background-image: url('../images/MargeSimpsons.png')"
-            data-index="1"
-          ></li>
-          <li
-            style="background-image: url('../images/Bart.png')"
-            data-index="2"
-          ></li>
-
-          <li
-            style="background-image: url('../images/Lisa.png')"
-            data-index="3"
-          ></li>
-          <li
-            style="background-image: url('../images/Maggie.png')"
-            data-index="4"
-          ></li>
-        </ul>
-
-        <!-- Functional arrow buttons -->
-        <div class="actions">
-          <button id="leftArrow" aria-label="Previous Character">
-            <i class="fa-regular fa-circle-left"></i>
-          </button>
-          <button id="rightArrow" aria-label="Next Character">
-            <i class="fa-regular fa-circle-right"></i>
-          </button>
-        </div>
+      <!-- About Simpsons Text -->
+      <section class="text">
+        <aside id="textHolder">
+          <h1>Meet The Simpsons Family</h1>
+          <p>
+            Meet the Simpsons family and their friends! From the mischievous
+            antics of Bart and Lisa to Marge’s caring guidance, and Homer’s
+            hilarious adventures including baby Maggie! Discover all your
+            favorite characters and learn more about their stories and quirks.
+          </p>
+        </aside>
       </section>
     </main>
+
+    <!-- Characters Images and Buttons -->
+    <section class="displayCharacters">
+      <!-- Homer Simpson -->
+      <figure>
+        <img src="../images/Homer.webp" alt="Homer Simpson" />
+        <svg class="character-btn" width="240" height="60" viewBox="0 0 240 60">
+          <!-- Left Circle Accent -->
+          <rect
+            class="circle-start"
+            x="0"
+            y="0"
+            width="60"
+            height="60"
+            rx="30"
+            ry="30"
+            fill="#0392dd"
+          />
+          <!-- Button Border -->
+          <rect
+            class="border"
+            x="0"
+            y="0"
+            width="240"
+            height="60"
+            rx="30"
+            ry="30"
+            fill="none"
+            stroke="#0392dd"
+            stroke-width="2"
+          />
+          <!-- Text -->
+          <text
+            x="140"
+            y="38"
+            text-anchor="middle"
+            font-size="20"
+            font-weight="700"
+            fill="#0392dd"
+          >
+            Homer Simpson
+          </text>
+          <!-- Arrow inside Circle -->
+          <polyline
+            points="22,20 28,30 22,40"
+            fill="none"
+            stroke="#fff"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </figure>
+
+      <!-- Marge Simpson -->
+      <figure>
+        <img src="../images/MargeSimpsons.png" alt="Marge Simpson" />
+        <svg class="character-btn" width="240" height="60" viewBox="0 0 240 60">
+          <rect
+            class="circle-start"
+            x="0"
+            y="0"
+            width="60"
+            height="60"
+            rx="30"
+            ry="30"
+            fill="#0392dd"
+          />
+          <rect
+            class="border"
+            x="0"
+            y="0"
+            width="240"
+            height="60"
+            rx="30"
+            ry="30"
+            fill="none"
+            stroke="#0392dd"
+            stroke-width="2"
+          />
+          <text
+            x="140"
+            y="38"
+            text-anchor="middle"
+            font-size="20"
+            font-weight="700"
+            fill="#0392dd"
+          >
+            Marge Simpson
+          </text>
+          <polyline
+            points="22,20 28,30 22,40"
+            fill="none"
+            stroke="#fff"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </figure>
+
+      <!-- Bart Simpson -->
+      <figure>
+        <img src="../images/Bart.png" alt="Bart Simpson" />
+        <svg class="character-btn" width="240" height="60" viewBox="0 0 240 60">
+          <rect
+            class="circle-start"
+            x="0"
+            y="0"
+            width="60"
+            height="60"
+            rx="30"
+            ry="30"
+            fill="#0392dd"
+          />
+          <rect
+            class="border"
+            x="0"
+            y="0"
+            width="240"
+            height="60"
+            rx="30"
+            ry="30"
+            fill="none"
+            stroke="#0392dd"
+            stroke-width="2"
+          />
+          <text
+            x="140"
+            y="38"
+            text-anchor="middle"
+            font-size="20"
+            font-weight="700"
+            fill="#0392dd"
+          >
+            Bart Simpson
+          </text>
+          <polyline
+            points="22,20 28,30 22,40"
+            fill="none"
+            stroke="#fff"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </figure>
+
+      <!-- Lisa Simpson -->
+      <figure>
+        <img src="../images/Lisa.png" alt="Lisa Simpson" />
+        <svg class="character-btn" width="240" height="60" viewBox="0 0 240 60">
+          <rect
+            class="circle-start"
+            x="0"
+            y="0"
+            width="60"
+            height="60"
+            rx="30"
+            ry="30"
+            fill="#0392dd"
+          />
+          <rect
+            class="border"
+            x="0"
+            y="0"
+            width="240"
+            height="60"
+            rx="30"
+            ry="30"
+            fill="none"
+            stroke="#0392dd"
+            stroke-width="2"
+          />
+          <text
+            x="140"
+            y="38"
+            text-anchor="middle"
+            font-size="20"
+            font-weight="700"
+            fill="#0392dd"
+          >
+            Lisa Simpson
+          </text>
+          <polyline
+            points="22,20 28,30 22,40"
+            fill="none"
+            stroke="#fff"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </figure>
+
+      <!-- Maggie Simpson -->
+      <figure>
+        <img src="../images/Maggie.png" alt="Maggie Simpson" />
+        <svg class="character-btn" width="240" height="60" viewBox="0 0 240 60">
+          <rect
+            class="circle-start"
+            x="0"
+            y="0"
+            width="60"
+            height="60"
+            rx="30"
+            ry="30"
+            fill="#0392dd"
+          />
+          <rect
+            class="border"
+            x="0"
+            y="0"
+            width="240"
+            height="60"
+            rx="30"
+            ry="30"
+            fill="none"
+            stroke="#0392dd"
+            stroke-width="2"
+          />
+          <text
+            x="140"
+            y="38"
+            text-anchor="middle"
+            font-size="20"
+            font-weight="700"
+            fill="#0392dd"
+          >
+            Maggie Simpson
+          </text>
+          <polyline
+            points="22,20 28,30 22,40"
+            fill="none"
+            stroke="#fff"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </figure>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -136,7 +335,6 @@
         </a>
 
         <!-- Twitter -->
-
         <a
           href="https://x.com/TheSimpsons/highlights"
           target="_blank"
@@ -146,11 +344,12 @@
         </a>
       </div>
 
-      <p>Copyright@2025 - Designed by Mbali Sithebe</p>
+      <p>Copyright @2025 - Designed by Mbali Sithebe</p>
     </footer>
 
     <!-- JavaScript Imports -->
     <script src="../CharactersPage/characters.js"></script>
     <script src="../src/nav.js"></script>
+    <script src="../src/gsap.js"></script>
   </body>
 </html>
