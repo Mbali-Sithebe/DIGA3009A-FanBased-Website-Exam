@@ -28,8 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((err) => console.error("Error loading characters JSON:", err));
 
-
-  //Function 
+  //Function
   function showCharacter(index) {
     const character = characters[index];
     if (!character) return;
@@ -62,3 +61,56 @@ document.addEventListener("DOMContentLoaded", () => {
     showCharacter(currentIndex);
   });
 });
+
+//2. Form Validation for Newsletter Subscription
+// Select elements
+const emailInput = document.querySelector(".newsletter-input-wrapper input");
+const subscribeBtn = document.getElementById("subBtn");
+
+// Function to show popup message
+function showPopup(message, type) {
+  const popup = document.createElement("div");
+  popup.textContent = message;
+  popup.className = `popup-message ${type}`;
+  document.body.appendChild(popup);
+
+  setTimeout(() => {
+    popup.classList.add("show");
+  }, 10);
+
+  setTimeout(() => {
+    popup.classList.remove("show");
+    setTimeout(() => popup.remove(), 300);
+  }, 2500);
+}
+
+// Real-time validation feedback
+emailInput.addEventListener("input", () => {
+  const emailValue = emailInput.value.trim();
+  const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (emailValue === "") {
+    emailInput.style.border = "2px solid #ccc";
+  } else if (!validEmail.test(emailValue)) {
+    emailInput.style.border = "2px solid red";
+  } else {
+    emailInput.style.border = "2px solid #0392dd";
+  }
+});
+
+// Click event for Subscribe button
+subscribeBtn.addEventListener("click", () => {
+  const emailValue = emailInput.value.trim();
+  const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (emailValue === "") {
+    showPopup("Please enter your email address.", "error");
+  } else if (!validEmail.test(emailValue)) {
+    showPopup("Invalid email address. Please check and try again.", "error");
+  } else {
+    showPopup("You have successfully subscribed to our community!", "success");
+    emailInput.value = ""; // clear input after success
+    emailInput.style.border = "2px solid #ccc";
+  }
+});
+

@@ -13,13 +13,7 @@
     <title>Home</title>
 
     <!-- Fav Icon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/Icon.png"
-      sizes="32x32"
-      type="image/png"
-    />
+    <link rel="icon" type="image/png" href="./images/Icon.png" sizes="32x32" />
 
     <!-- Font Awesome -->
     <link
@@ -33,7 +27,7 @@
     <!-- GSAP For Animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 
-    <!-- Axios [for API calls] -->
+    <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 
     <!-- CSS Script -->
@@ -42,17 +36,16 @@
   <body class="home">
     <div class="bg-home"></div>
     <div class="bg-overlay"></div>
-    <!-- JavaScrip Generated Navigation Bar -->
+
+    <!-- Navigation Bar -->
     <header>
       <section id="navigation-bar">
         <nav>
-          <!-- Simpsons Logo -->
           <h1 class="logo">
             <span class="top-text">D’OH</span><br />
             <span class="bottom-text">SPRINGFIELD</span>
           </h1>
 
-          <!-- Menu container for JS-generated menu -->
           <aside
             id="menu-container"
             role="navigation"
@@ -62,36 +55,236 @@
       </section>
     </header>
 
-    <!-- Main Section Information -->
+    <!-- Main Section -->
     <main class="homepage-content">
       <section id="info-box">
-        <!-- Text Context -->
-        <aside id="textContent">
-          <h1>THE SIMPSONS WORLD</h1>
-          <p>
-            Step into Springfield! Meet the characters and their favorite
-            quotes, relive the episodes, visit or Simpson shop and explore the
-            adaptations that made The Simpsons a global phenomenon.
-          </p>
+        <div class="flip-card">
+          <!-- Front side -->
+          <div class="flip-card-front">
+            <aside id="textContent">
+              <h1>THE SIMPSONS WORLD</h1>
+              <p>
+                Step into Springfield! We welcome you to the ultimate fan-based
+                website dedicated to The Simpsons. Meet your favorite characters
+                and relive their iconic catchphrases, explore unforgettable
+                episodes, and discover how adaptation has transformed The
+                Simpsons into a global phenomenon.<br />
+              </p>
 
-          <!-- Buttons -->
-          <aside id="Btns">
-            <button id="episodes">Watch Episodes</button>
-            <button id="quotes">Explore Quotes</button>
-          </aside>
-        </aside>
+              <!-- Buttons -->
+              <aside id="Btns">
+                <!-- First Button -->
+                <svg
+                  class="svg-btn"
+                  width="240"
+                  height="50"
+                  viewBox="0 0 240 50"
+                >
+                  <!-- Circle -->
+                  <rect
+                    class="circle-start"
+                    x="0"
+                    y="0"
+                    width="50"
+                    height="50"
+                    rx="50"
+                    ry="30"
+                    fill="#0392dd"
+                  />
+                  <!-- Border -->
+                  <rect
+                    class="border"
+                    x="0"
+                    y="0"
+                    width="240"
+                    height="50"
+                    rx="25"
+                    ry="25"
+                    fill="none"
+                    stroke="#0392dd"
+                    stroke-width="2"
+                  />
+                  <!-- Text -->
+                  <text
+                    x="123"
+                    y="32"
+                    text-anchor="middle"
+                    font-size="15"
+                    font-weight="700"
+                    fill="#0392dd"
+                  >
+                    WATCH EPISODES
+                  </text>
 
-        <!-- Image -->
+                  <!-- Arrow -->
+                  <polyline
+                    class="arrow"
+                    points="26 21 32 25 26 29"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+                <!-- Second Button -->
+                <svg
+                  class="svg-btn"
+                  width="240"
+                  height="50"
+                  viewBox="0 0 240 50"
+                >
+                  <!-- Circle -->
+                  <rect
+                    class="circle-start"
+                    x="0"
+                    y="0"
+                    width="50"
+                    height="50"
+                    rx="50"
+                    ry="30"
+                    fill="#0392dd"
+                  />
+                  <!-- Border -->
+                  <rect
+                    class="border"
+                    x="0"
+                    y="0"
+                    width="240"
+                    height="50"
+                    rx="25"
+                    ry="25"
+                    fill="none"
+                    stroke="#0392dd"
+                    stroke-width="2"
+                  />
+                  <!-- Text -->
+                  <text
+                    x="140"
+                    y="32"
+                    text-anchor="middle"
+                    font-size="15"
+                    font-weight="700"
+                    fill="#0392dd"
+                  >
+                    EXPLORE CHARACTERS
+                  </text>
+
+                  <!-- Arrow -->
+                  <polyline
+                    class="arrow"
+                    points="26 21 32 25 26 29"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </aside>
+            </aside>
+          </div>
+
+          <!-- Back side -->
+          <div class="flip-card-back">
+            <aside class="newsletter">
+              <h2>Join Our Community by Subscribing to our Newsletter</h2>
+              <p>
+                Stay Updated with Springfield! Subscribe to get the latest
+                episodes, character updates, and catchphrases.
+              </p>
+
+              <div class="newsletter-input-wrapper">
+                <input type="email" placeholder="Type your email here" />
+                <aside id="subBtn">
+                  <svg
+                    class="svg-btn"
+                    width="240"
+                    height="50"
+                    viewBox="0 0 240 50"
+                  >
+                    <rect
+                      class="circle-start"
+                      x="0"
+                      y="0"
+                      width="50"
+                      height="50"
+                      rx="50"
+                      ry="30"
+                      fill="#0392dd"
+                    />
+                    <rect
+                      class="border"
+                      x="0"
+                      y="0"
+                      width="240"
+                      height="50"
+                      rx="25"
+                      ry="25"
+                      fill="none"
+                      stroke="#0392dd"
+                      stroke-width="2"
+                    />
+                    <text
+                      x="140"
+                      y="32"
+                      text-anchor="middle"
+                      font-size="15"
+                      font-weight="700"
+                      fill="#0392dd"
+                    >
+                      Subscribe Now
+                    </text>
+                    <polyline
+                      class="arrow"
+                      points="26 21 32 25 26 29"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </aside>
+              </div>
+
+              <p>No spam, just pure Springfield goodness!</p>
+            </aside>
+
+            <figure id="subscribeIMG">
+              <img
+                src="./images/Homer Newsletter-1-Picsart.png"
+                alt="Wallpaper"
+              />
+            </figure>
+          </div>
+        </div>
+
         <figure id="image">
           <img src="./images/cover_3.jpg" alt="Wallpaper" />
         </figure>
       </section>
     </main>
 
-    <!-- Footer -->
+    <aside class="rotationButton">
+      <button id="rotationBtn">
+        <i class="fa-solid fa-rotate"></i>
+        <!-- Animated border -->
+        <svg class="border-svg" width="50" height="50">
+          <circle
+            cx="25"
+            cy="25"
+            r="23"
+            fill="none"
+            stroke="#0392DD"
+            stroke-width="3"
+          />
+        </svg>
+      </button>
+    </aside>
+
+    <section class="newsletter"></section>
+
     <footer>
       <div class="icons">
-        <!-- Instagram -->
         <a
           href="https://www.instagram.com/thesimpsonsfan/?hl=en"
           target="_blank"
@@ -99,8 +292,6 @@
         >
           <i class="fa-brands fa-instagram"></i>
         </a>
-
-        <!-- Youtube -->
         <a
           href="https://www.youtube.com/@officialnancycartwright/videos"
           target="_blank"
@@ -108,9 +299,6 @@
         >
           <i class="fa-brands fa-youtube"></i>
         </a>
-
-        <!-- Twitter -->
-
         <a
           href="https://x.com/TheSimpsons/highlights"
           target="_blank"
@@ -123,7 +311,7 @@
       <p>Copyright@2025 - Designed by Mbali Sithebe</p>
     </footer>
 
-    <!-- JavaScript Imports -->
+    <!-- JS Imports -->
     <script src="./src/nav.js"></script>
     <script src="./src/app.js"></script>
     <script src="./src/gsap.js"></script>
