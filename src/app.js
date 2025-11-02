@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //2. Form Validation for Newsletter Subscription
-// Select elements
+
 const emailInput = document.querySelector(".newsletter-input-wrapper input");
 const subscribeBtn = document.getElementById("subBtn");
 
@@ -114,3 +114,22 @@ subscribeBtn.addEventListener("click", () => {
   }
 });
 
+// Watch Episodes Button Functionality
+const watchBtn = document.getElementById("watchEpisodesBtn");
+
+watchBtn.addEventListener("click", () => {
+  window.location.href = "EpisodesPage/episodes.html";
+});
+
+// Explore Characters Phrases Button Functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const exploreBtn = document.getElementById("exploreQuotesBtn");
+
+  if (exploreBtn) {
+    exploreBtn.addEventListener("click", () => {
+      window.location.href = "../CharactersPhrases/charactersPhr.html";
+    });
+  }
+});
+
+// Episodes Page - Fetch and Display Episodes Using API

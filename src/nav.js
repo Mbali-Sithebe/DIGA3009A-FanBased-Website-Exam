@@ -7,6 +7,7 @@ const menuItems = [
   { name: "Characters", href: "CharactersPage/characters.html" },
   { name: "Episodes", href: "EpisodesPage/episodes.html" },
   { name: "Adaptation", href: "AdaptationPage/adaptation.html" },
+  { name: "CharactersPhrases", href: "CharactersPhrases/charactersPhr.html" },
 ];
 
 // Function to generate the nav menu
@@ -29,7 +30,8 @@ function initialiseMenu(currentPage) {
         window.location.pathname.includes("/AboutPage/") ||
         window.location.pathname.includes("/CharactersPage/") ||
         window.location.pathname.includes("/EpisodesPage/") ||
-        window.location.pathname.includes("/AdaptationPage/")
+        window.location.pathname.includes("/AdaptationPage/") ||
+        window.location.pathname.includes("/CharactersPhrases/")
       ) {
         relativeHref = "../" + menuItem.href;
       }
