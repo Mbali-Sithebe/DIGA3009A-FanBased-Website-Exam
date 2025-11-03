@@ -72,7 +72,7 @@ body {
 }
 
 .character-card {
-  position: relative; 
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,7 +89,6 @@ body {
   margin-bottom: 50px;
 }
 
-
 .character-card .profile-pic {
   width: 120px;
   height: 120px;
@@ -99,25 +98,22 @@ body {
   margin-bottom: 15px;
 }
 
-
 .character-card .character-name {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #0392dd; 
+  color: #0392dd;
   text-align: center;
 }
-
 
 .character-card .character-quote {
   font-size: 1rem;
   font-weight: bold;
   color: #555;
   text-align: center;
-  min-height: 50px; 
+  min-height: 50px;
   margin-bottom: 10px;
 }
-
 
 .character-card .quote-flip-btn {
   position: absolute;
@@ -126,8 +122,8 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: white;
-  border: 2px solid #ccc;
+  background-color: #f8db27;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,7 +143,6 @@ body {
 .character-card .quote-flip-btn:hover i {
   color: white;
 }
-
 
 .phrases-container {
   display: flex;
