@@ -1,9 +1,5 @@
 //API IMPLEMENTATION CODE EXAMPLE:
 
-//1. Calling the APIs
-let charactersApiUrl = "https://thesimpsonsapi.com/api/characters";
-let episodesApiUrl = "https://thesimpsonsapi.com/api/episodes";
-
 //2.Characters Change Button Functionality
 document.addEventListener("DOMContentLoaded", () => {
   let characters = [];
@@ -131,5 +127,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-// Episodes Page - Fetch and Display Episodes Using API

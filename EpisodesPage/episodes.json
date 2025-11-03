@@ -1,0 +1,23 @@
+{
+  "season": 1,
+  "episodes": [
+    {
+      "episode_number": 1,
+      "title": "Simpsons Roasting on an Open Fire",
+      "synopsis": "When Mr. Burns announces that none of the workers will be getting Christmas bonuses and Marge reveals that she spent the extra Christmas gift money on getting Bart's 'Mother' tattoo removed, Homer keeps his lack of funds for the holidays a secret and gets a job as a mall Santa.",
+      "image": "/episode/1.webp",
+      "trailer_url": "https://youtu.be/cIfLqO3SSBs?si=EF022sFRkb4iVP6G",
+      "rating": 0,
+      "isFavorite": false
+    },
+    {
+      "episode_number": 2,
+      "title": "Bart the Genius",
+      "synopsis": "To get back at class nerd/teacher's pet, Martin Prince, for ratting him out to Principal Skinner for vandalism on school property, Bart switches his own intelligence test with Martin's. During a parent/principal conference about the defaced wall, the school counselor, Dr. Pryor, announces that Bart is a genius and only acts out because public school isn't stimulating enough, so Bart is sent to a school for genius kids — and finds out just how painfully below average he is.",
+      "image": "/episode/2.webp",
+      "trailer_url": "https://www.youtube.com/embed/7zPnrLfs78I?si=Nm35RPFXXCgpyiNB",
+      "rating": 0,
+      "isFavorite": false
+    }
+  ]
+}

@@ -31,8 +31,10 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 
     <!-- CSS Script -->
+
     <link rel="stylesheet" href="../AboutPage/about.css" />
     <link rel="stylesheet" href="../HomePage/home.css" />
+    <link rel="stylesheet" href="./episodes.css" />
   </head>
   <body class="about">
     <!-- JavaScrip Generated Navigation Bar -->
@@ -55,7 +57,124 @@
       </section>
     </header>
 
-    <!-- Main Content -->
+    <!-- Episodes Dropdown Button -->
+    <aside id="myDropdown-Btn">
+      <button id="dropdownBtn" class="dropdown-btn">Browse Episodes</button>
+      <div class="dropdown-content" id="dropdownContent">
+        <a href="#" data-episode="1">Episode 1</a>
+        <a href="#" data-episode="2">Episode 2</a>
+        <a href="#" data-episode="3">Episode 3</a>
+        <a href="#" data-episode="4">Episode 4</a>
+        <a href="#" data-episode="5">Episode 5</a>
+        <a href="#" data-episode="6">Episode 6</a>
+        <a href="#" data-episode="7">Episode 7</a>
+        <a href="#" data-episode="8">Episode 8</a>
+        <a href="#" data-episode="9">Episode 9</a>
+        <a href="#" data-episode="10">Episode 10</a>
+      </div>
+    </aside>
+
+    <main>
+      <section class="episodes-section">
+        <div id="textHolder" class="episodes-container">
+          <!-- Heart Button -->
+          <button id="heartIconBtn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+
+          <!-- Video and Info Container -->
+          <div class="episode-flex">
+            <!-- Video -->
+            <div id="movieTrailer" class="video-container">
+              <iframe
+                id="trailerFrame"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/cIfLqO3SSBs"
+                title="The Simpsons Episode 1 Trailer"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <!-- Episode Info -->
+            <div class="episode-info">
+              <h2 class="title">Simpsons Roasting on an Open Fire</h2>
+              <p class="synopsis">
+                When Mr. Burns announces that none of the workers will be
+                getting Christmas bonuses and Marge reveals that she spent the
+                extra Christmas gift money on getting Bart's "Mother" tattoo
+                removed, Homer keeps his lack of funds for the holidays a secret
+                and gets a job as a mall Santa.
+              </p>
+
+              <!-- Buttons -->
+              <aside id="buttonsContainer">
+                <!-- Star Ratings -->
+                <div id="rating-stars">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+
+                <!-- Watch Button -->
+                <svg
+                  id="watchBtn"
+                  class="svg-btn"
+                  width="240"
+                  height="50"
+                  viewBox="0 0 240 50"
+                >
+                  <rect
+                    class="circle-start"
+                    x="0"
+                    y="0"
+                    width="50"
+                    height="50"
+                    rx="50"
+                    ry="30"
+                    fill="#0392dd"
+                  />
+                  <rect
+                    class="border"
+                    x="0"
+                    y="0"
+                    width="240"
+                    height="50"
+                    rx="25"
+                    ry="25"
+                    fill="none"
+                    stroke="#0392dd"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="123"
+                    y="32"
+                    text-anchor="middle"
+                    font-size="15"
+                    font-weight="700"
+                    fill="#fff"
+                  >
+                    WATCH EPISODE
+                  </text>
+                  <polyline
+                    class="arrow"
+                    points="26 21 32 25 26 29"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -93,6 +212,7 @@
     </footer>
 
     <!-- JavaScript Imports -->
+    <script src="./episodes.js"></script>
     <script src="../src/nav.js"></script>
     <script src="../src/app.js"></script>
     <script src="/src/gsap.js"></script>
