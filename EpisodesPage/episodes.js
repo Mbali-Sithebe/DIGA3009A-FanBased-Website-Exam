@@ -20,6 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const episodesVideos = {
     1: "https://www.youtube.com/embed/cIfLqO3SSBs",
     2: "https://www.youtube.com/embed/7zPnrLfs78I?si=Nm35RPFXXCgpyiNB",
+    3: "https://www.youtube.com/embed/IA7vyK0KRdw?si=yu17rSHZeK_Pl-ZM",
+    4: "https://www.youtube.com/embed/KQYU8nTmDew?si=j63qd356sRb4bMOG",
+    5: "https://www.youtube.com/embed/n4HQsgQyChA?si=L-VSxh0DexxQ17HD",
+    6: "https://www.youtube.com/embed/V86xXwaqPOU?si=mkzRE-zqvTiZN9PU",
+    7: "https://www.youtube.com/embed/Orc_b-8aJQw?si=6fTZkYOqWJLCpwZZ",
+    8: "https://www.youtube.com/embed/VcacBtgGKlo?si=t6rRfWks0F_9zpl_",
+    9: "https://www.youtube.com/embed/xvyvnph9YO8?si=9aTXxVR4BnUJOKol",
+    10: "https://www.youtube.com/embed/2NVfQdvoDUE?si=ATitKvwauV6nhHaO",
   };
 
   // ============================
