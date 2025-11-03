@@ -33,6 +33,7 @@
     <!-- CSS Script -->
     <link rel="stylesheet" href="../AboutPage/about.css" />
     <link rel="stylesheet" href="../HomePage/home.css" />
+    <link rel="stylesheet" href="charactersPhr.css" />
   </head>
   <body class="about">
     <!-- JavaScrip Generated Navigation Bar -->
@@ -56,6 +57,84 @@
     </header>
 
     <!-- Main Content -->
+    <!-- Character Phrases Section -->
+    <section id="characterPhrases">
+      <h1 class="section-title">Simpsons Character Quotes</h1>
+
+      <div class="phrases-container">
+        <!-- Character Card 1 -->
+        <div class="character-card" id="homerCard">
+          <img
+            src="../images/Homer.webp"
+            alt="Homer Simpson"
+            class="profile-pic"
+          />
+          <h2 class="character-name">Homer Simpson</h2>
+          <p class="character-quote" id="homerQuote">"D'oh!"</p>
+          <button class="quote-flip-btn" data-character="homer">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+
+        <!-- Character Card 2 -->
+        <div class="character-card" id="margeCard">
+          <img
+            src="../images/MargeSimpsons.png"
+            alt="Marge Simpson"
+            class="profile-pic"
+          />
+          <h2 class="character-name">Marge Simpson</h2>
+          <p class="character-quote" id="margeQuote">"Hmm..."</p>
+          <button class="quote-flip-btn" data-character="marge">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+
+        <!-- Character Card 3 -->
+        <div class="character-card" id="bartCard">
+          <img
+            src="../images/Bart.png"
+            alt="Bart Simpson"
+            class="profile-pic"
+          />
+          <h2 class="character-name">Bart Simpson</h2>
+          <p class="character-quote" id="bartQuote">"Eat my shorts!"</p>
+          <button class="quote-flip-btn" data-character="bart">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+
+        <!-- Character Card 4 -->
+        <div class="character-card" id="lisaCard">
+          <img
+            src="../images/Lisa.png"
+            alt="Lisa Simpson"
+            class="profile-pic"
+          />
+          <h2 class="character-name">Lisa Simpson</h2>
+          <p class="character-quote" id="lisaQuote">
+            "If anyone wants me, I'll be in my room."
+          </p>
+          <button class="quote-flip-btn" data-character="lisa">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+
+        <!-- Character Card 5 -->
+        <div class="character-card" id="maggieCard">
+          <img
+            src="../images/Maggie.png"
+            alt="Maggie Simpson"
+            class="profile-pic"
+          />
+          <h2 class="character-name">Maggie Simpson</h2>
+          <p class="character-quote" id="maggieQuote">"..."</p>
+          <button class="quote-flip-btn" data-character="maggie">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -93,6 +172,7 @@
     </footer>
 
     <!-- JavaScript Imports -->
+    <script src="../CharactersPhrases/charactersPhr.js"></script>
     <script src="../src/nav.js"></script>
     <script src="../src/app.js"></script>
     <script src="/src/gsap.js"></script>
