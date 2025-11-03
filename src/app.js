@@ -1,4 +1,4 @@
-//API IMPLEMENTATION CODE EXAMPLE:
+
 
 //2.Characters Change Button Functionality
 document.addEventListener("DOMContentLoaded", () => {

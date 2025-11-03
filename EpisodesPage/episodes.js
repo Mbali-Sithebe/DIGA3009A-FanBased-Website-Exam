@@ -33,12 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // ============================
   // 2. Fetch Live API for Title & Synopsis
   // ============================
-  let episodesMap = {}; // to store live API data
+  let episodesMap = {};
 
   axios
     .get("https://thesimpsonsapi.com/api/episodes")
     .then((res) => {
-      const episodesData = res.data.results || []; // API uses 'results'
+      const episodesData = res.data.results || [];
 
       // Map episodes by number for easy access
       episodesData.forEach((ep) => {
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Initialize default episode info
       if (episodesMap[selectedEpisodeNumber]) {
-        episodeTitle.textContent = episodesMap[selectedEpisodeNumber].name; // API uses 'name'
+        episodeTitle.textContent = episodesMap[selectedEpisodeNumber].name;
         episodeSynopsis.textContent =
           episodesMap[selectedEpisodeNumber].synopsis;
       }
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Update title & synopsis from live API
       if (episodesMap[epNum]) {
-        episodeTitle.textContent = episodesMap[epNum].name; // API uses 'name'
+        episodeTitle.textContent = episodesMap[epNum].name;
         episodeSynopsis.textContent = episodesMap[epNum].synopsis;
       }
 
