@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (exploreBtn) {
     exploreBtn.addEventListener("click", () => {
-      window.location.href = "../characters-phrases/charactersPhr.html";
+      window.location.href = "characters-phrases/charactersPhr.html";
     });
   }
 });
