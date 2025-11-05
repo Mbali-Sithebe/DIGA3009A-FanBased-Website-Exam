@@ -3,11 +3,11 @@
 // Array list of the nav menu
 const menuItems = [
   { name: "Home", href: "index.html" },
-  { name: "About", href: "AboutPage/about.html" },
-  { name: "Characters", href: "CharactersPage/characters.html" },
-  { name: "Episodes", href: "EpisodesPage/episodes.html" },
-  { name: "Adaptation", href: "AdaptationPage/adaptation.html" },
-  { name: "CharactersPhrases", href: "CharactersPhrases/charactersPhr.html" }, // hidden page
+  { name: "About", href: "about/about.html" },
+  { name: "Characters", href: "characters/characters.html" },
+  { name: "Episodes", href: "episodes/episodes.html" },
+  { name: "Adaptation", href: "adaptation/adaptation.html" },
+  { name: "CharactersPhrases", href: "characters-phrases/charactersPhr.html" }, // hidden page
 ];
 
 // Function to generate the nav menu
@@ -30,11 +30,11 @@ function initialiseMenu(currentPage) {
       // Adjust relative path for subfolders
       let relativeHref = menuItem.href;
       if (
-        window.location.pathname.includes("/AboutPage/") ||
-        window.location.pathname.includes("/CharactersPage/") ||
-        window.location.pathname.includes("/EpisodesPage/") ||
-        window.location.pathname.includes("/AdaptationPage/") ||
-        window.location.pathname.includes("/CharactersPhrases/")
+        window.location.pathname.includes("/about/") ||
+        window.location.pathname.includes("/characters/") ||
+        window.location.pathname.includes("/episodes/") ||
+        window.location.pathname.includes("/adaptation/") ||
+        window.location.pathname.includes("/characters-phrases/")
       ) {
         relativeHref = "../" + menuItem.href;
       }

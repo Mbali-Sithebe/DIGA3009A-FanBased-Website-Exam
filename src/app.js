@@ -1,5 +1,3 @@
-
-
 //2.Characters Change Button Functionality
 document.addEventListener("DOMContentLoaded", () => {
   let characters = [];
@@ -114,7 +112,7 @@ subscribeBtn.addEventListener("click", () => {
 const watchBtn = document.getElementById("watchEpisodesBtn");
 
 watchBtn.addEventListener("click", () => {
-  window.location.href = "EpisodesPage/episodes.html";
+  window.location.href = "episodes/episodes.html";
 });
 
 // Explore Characters Phrases Button Functionality
@@ -123,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (exploreBtn) {
     exploreBtn.addEventListener("click", () => {
-      window.location.href = "../CharactersPhrases/charactersPhr.html";
+      window.location.href = "../characters-phrases/charactersPhr.html";
     });
   }
 });
