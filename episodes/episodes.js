@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     7: "https://www.youtube.com/embed/Orc_b-8aJQw?si=6fTZkYOqWJLCpwZZ",
     8: "https://www.youtube.com/embed/VcacBtgGKlo?si=t6rRfWks0F_9zpl_",
     9: "https://www.youtube.com/embed/xvyvnph9YO8?si=9aTXxVR4BnUJOKol",
-    10: "https://www.youtube.com/embed/2NVfQdvoDUE?si=ATitKvwauV6nhHaO",
+    10: "https://www.youtube.com/embed/v_lhcN_rzBw?si=9FBX2H1AciQ_-xkq", // replaced episode 10 with 11's video
   };
 
   // 2. Fetch Live API for Title & Synopsis
@@ -39,6 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
       episodesData.forEach((ep) => {
         episodesMap[ep.episode_number] = ep;
       });
+
+      // Replace episode 10 data with episode 11 because of language
+      if (episodesMap[11]) {
+        episodesMap[10] = episodesMap[11];
+      }
 
       // Initialize first episode
       if (episodesMap[selectedEpisodeNumber]) {
@@ -87,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // 5. Watch Button functionality (autoplay video)
   watchBtn.addEventListener("click", (event) => {
     event.preventDefault();
 
@@ -121,7 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 /**************************  Episodes Page GSAP **************************/
 
 document.addEventListener("DOMContentLoaded", () => {
