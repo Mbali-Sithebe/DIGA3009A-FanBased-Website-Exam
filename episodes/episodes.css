@@ -160,30 +160,27 @@ body {
   align-self: flex-start;
   margin-left: -5px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  overflow: visible; 
 }
-
-#watchBtn:hover {
-  transform: scale(1.05);
-}
-
-#watchBtn:hover text {
-  fill: #0392dd;
-}
-
-
 
 #watchBtn .circle-start {
-  fill: #0392dd;
-  transition: fill 0.3s ease;
+  fill: #0392dd; 
+  transition: fill 0.3s ease; 
 }
 
 #watchBtn .border {
   stroke: #0392dd;
-  transition: stroke 0.3s ease;
+  stroke-width: 2;
+  transition: stroke 0.3s ease; 
 }
 
 #watchBtn text {
-  fill: #0392dd;
+  fill: #0392dd; 
   transition: fill 0.3s ease;
+}
+
+
+#watchBtn .arrow {
+  stroke: #fff;
+  transition: stroke 0.3s ease;
 }
