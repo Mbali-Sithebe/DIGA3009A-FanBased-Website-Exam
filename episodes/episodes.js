@@ -1,7 +1,6 @@
 /********************* FETCHING SIMPSONS EPISODES USING API **************************/
 
 // 0. DOM Elements
-
 document.addEventListener("DOMContentLoaded", () => {
   const dropdownBtn = document.getElementById("dropdownBtn");
   const dropdownContent = document.getElementById("dropdownContent");
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let selectedEpisodeNumber = 1;
 
   // 1. Fixed YouTube Videos per Episode
-
   const episodesVideos = {
     1: "https://www.youtube.com/embed/cIfLqO3SSBs",
     2: "https://www.youtube.com/embed/7zPnrLfs78I?si=Nm35RPFXXCgpyiNB",
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // 2. Fetch Live API for Title & Synopsis
-
   let episodesMap = {};
 
   axios
@@ -43,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         episodesMap[ep.episode_number] = ep;
       });
 
+      // Initialize first episode
       if (episodesMap[selectedEpisodeNumber]) {
         episodeTitle.textContent = episodesMap[selectedEpisodeNumber].name;
         episodeSynopsis.textContent =
@@ -52,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((err) => console.error("Error fetching episodes data:", err));
 
   // 3. Dropdown click functionality
-
   dropdownContent.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -76,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 4. Toggle dropdown visibility
-
   dropdownBtn.addEventListener("click", () => {
     dropdownContent.style.display =
       dropdownContent.style.display === "block" ? "none" : "block";
@@ -91,23 +87,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 5. Watch Button Plays Video
+  watchBtn.addEventListener("click", (event) => {
+    event.preventDefault(); // stop default reload behavior
 
-  watchBtn.addEventListener("click", () => {
     if (episodesVideos[selectedEpisodeNumber]) {
-      trailerFrame.src = episodesVideos[selectedEpisodeNumber] + "?autoplay=1";
+      // Force iframe reload by adding a random query param
+      const videoURL = episodesVideos[selectedEpisodeNumber];
+      trailerFrame.src =
+        videoURL +
+        (videoURL.includes("?") ? "&" : "?") +
+        "autoplay=1&rand=" +
+        Date.now();
     }
   });
 
   // 6. Heart Button Toggle
-
   heartBtn.addEventListener("click", () => {
     heartIcon.classList.toggle("fa-solid");
     heartIcon.classList.toggle("fa-regular");
   });
 
   // 7. Star Rating Toggle
-
   stars.forEach((star, idx) => {
     star.addEventListener("click", () => {
       stars.forEach((s, i) => {
