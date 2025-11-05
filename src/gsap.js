@@ -1,7 +1,6 @@
 //-------------------------------- Homepage Animations --------------------------------//
 
 //1. Simpsons Logo Animation
-
 window.addEventListener("load", () => {
   const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
@@ -56,7 +55,6 @@ window.addEventListener("load", () => {
   });
 
   //3 Rotation Button Animation
-
   const circle = document.querySelector(".border-svg circle");
 
   circle.style.strokeDasharray = 145;
@@ -76,9 +74,9 @@ window.addEventListener("load", () => {
   const backContent = document.querySelector(".flip-card-back");
   const frontImage = document.getElementById("image");
 
-  backContent.style.display = "none"; // hide newsletter
-
   let flipped = false;
+
+  backContent.style.display = "none";
 
   rotationBtn.addEventListener("click", () => {
     if (!flipped) {
