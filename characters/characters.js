@@ -35,3 +35,61 @@ characterButtons.forEach((btn) => {
   btn.addEventListener("mouseenter", () => tl.play());
   btn.addEventListener("mouseleave", () => tl.reverse());
 });
+
+/************************** Characters Page GSAP **************************/
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+
+  gsap.set("#textHolder h1, #textHolder p", { opacity: 0, y: -20 });
+
+  // 1. Top Box / Text Entrance
+  gsap.from("#textHolder", {
+    scrollTrigger: {
+      trigger: "#textHolder",
+      start: "top 90%",
+      toggleActions: "play none none none",
+      once: true,
+    },
+    opacity: 0,
+    y: 30,
+    scale: 0.98,
+    duration: 1.0,
+    ease: "power3.out",
+    onComplete: () => {
+      gsap.to("#textHolder h1, #textHolder p", {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        stagger: 0.18,
+        ease: "power2.out",
+      });
+    },
+  });
+
+  // 2. Character PNGs appearance (sequence animation)
+
+  const characterImgs = document.querySelectorAll(
+    ".displayCharacters figure img"
+  );
+
+  gsap.from(characterImgs, {
+    scrollTrigger: {
+      trigger: ".displayCharacters",
+      start: "top 80%",
+      toggleActions: "play none none none",
+      once: true,
+    },
+    opacity: 0,
+    scale: 0.8,
+    y: 25,
+    duration: 1.0,
+    stagger: 0.2,
+    ease: "back.out(1.6)",
+  });
+
+  if (characterImgs.length === 0) {
+  }
+});

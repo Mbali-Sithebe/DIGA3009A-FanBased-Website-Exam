@@ -50,9 +50,9 @@ axios
     console.error("Error fetching characters data:", error);
   });
 
-//////////////////// GSAP ANIMATIONS ////////////////////
+/********************************* GSAP ANIMATIONS *********************************/
 
-// Section title animation
+// Section title
 gsap.from(".section-title", {
   y: -50,
   opacity: 0,
@@ -80,17 +80,14 @@ gsap.from(".profile-pic", {
   ease: "elastic.out(1, 0.5)",
 });
 
-// Animate quote buttons on click
 document.querySelectorAll(".quote-flip-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
-    // Rotate the button when clicked
     gsap.fromTo(
       btn,
       { rotationY: 0 },
       { rotationY: 360, duration: 0.6, ease: "power1.inOut" }
     );
 
-    // Animate the quote text
     const quote = btn.parentElement.querySelector(".character-quote");
     gsap.fromTo(
       quote,
@@ -99,4 +96,3 @@ document.querySelectorAll(".quote-flip-btn").forEach((btn) => {
     );
   });
 });
-
