@@ -88,10 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   watchBtn.addEventListener("click", (event) => {
-    event.preventDefault(); // stop default reload behavior
+    event.preventDefault();
 
     if (episodesVideos[selectedEpisodeNumber]) {
-      // Force iframe reload by adding a random query param
       const videoURL = episodesVideos[selectedEpisodeNumber];
       trailerFrame.src =
         videoURL +
@@ -121,4 +120,37 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+});
+
+/**************************  Episodes Page GSAP **************************/
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof gsap !== "undefined") {
+    gsap.set(
+      ".episode-info h2, .episode-info p, #buttonsContainer, #movieTrailer",
+      { opacity: 0, y: 20 }
+    );
+
+    const tl = gsap.timeline();
+
+    tl.to(".episode-info h2, .episode-info p", {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power2.out",
+    });
+
+    tl.to(
+      "#movieTrailer, #buttonsContainer",
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.15,
+        ease: "power2.out",
+      },
+      "-=0.5"
+    );
+  }
 });
