@@ -171,6 +171,10 @@ body {
   fill: #0392dd;
 }
 
+#watchBtn:hover .circle-start {
+  fill: #0392dd;
+}
+
 #watchBtn .circle-start {
   fill: #0392dd;
   transition: fill 0.3s ease;
