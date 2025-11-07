@@ -145,10 +145,6 @@ body {
   transition: transform 0.2s ease;
 }
 
-.displayCharacters figure svg.character-btn .circle-start {
-  fill: #0392dd;
-}
-
 .displayCharacters figure svg.character-btn .border {
   stroke: #0392dd;
   stroke-width: 2;
@@ -157,6 +153,8 @@ body {
 .displayCharacters figure svg.character-btn text {
   font-size: 20px;
   font-weight: 700;
+  fill: #0392dd !important;
+  transition: fill 0.3s ease;
 }
 
 /********************************  Responsive Design Start Here  ********************************/
@@ -188,8 +186,8 @@ body {
   .displayCharacters {
     padding: 20px 50px;
     max-width: 92%;
-    width: 100%; 
-    margin: 20px 0; 
+    width: 100%;
+    margin: 20px 0;
     display: flex;
     gap: 70px;
   }
@@ -213,6 +211,4 @@ body {
     width: 120px;
     height: 76px;
   }
-
- 
 }
