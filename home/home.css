@@ -64,10 +64,9 @@
 }
 
 #menu-container ul.menu {
-  margin-left: 15rem !important;
   display: flex;
   list-style: none;
-  gap: 6rem !important;
+  gap: 5rem !important;
   margin: 0;
   padding: 0;
   font-size: 1.2rem;
