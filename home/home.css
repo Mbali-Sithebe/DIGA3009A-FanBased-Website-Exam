@@ -64,6 +64,7 @@
 }
 
 #menu-container ul.menu {
+  margin-left: 12rem !important;
   display: flex;
   list-style: none;
   gap: 5rem !important;
