@@ -7,6 +7,11 @@
   font-family: Quicksand, sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden !important;
+}
+
 body {
   background-color: #ffedf3;
 }
@@ -160,27 +165,107 @@ body {
   align-self: flex-start;
   margin-left: -5px;
   cursor: pointer;
-  overflow: visible; 
+  overflow: visible;
 }
 
 #watchBtn .circle-start {
-  fill: #0392dd; 
-  transition: fill 0.3s ease; 
+  fill: #0392dd;
+  transition: fill 0.3s ease;
 }
 
 #watchBtn .border {
   stroke: #0392dd;
   stroke-width: 2;
-  transition: stroke 0.3s ease; 
+  transition: stroke 0.3s ease;
 }
 
 #watchBtn text {
-  fill: #0392dd; 
+  fill: #0392dd;
   transition: fill 0.3s ease;
 }
-
 
 #watchBtn .arrow {
   stroke: #fff;
   transition: stroke 0.3s ease;
+}
+
+/********************************  Responsive Design Start Here  ********************************/
+
+@media screen and (max-width: 768px) {
+  #myDropdown-Btn {
+    margin-left: 25px;
+  }
+
+  .dropdown-btn {
+    min-width: 195px;
+    font-size: 1rem !important;
+  }
+
+  .dropdown-content {
+    min-width: 195px;
+  }
+
+  .episode-flex {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .episode-info {
+    margin-left: 0;
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .episode-info h2.title {
+    font-size: 1.6rem;
+  }
+
+  .episode-info p.synopsis {
+    max-width: 110%;
+  }
+
+  #textHolder {
+    max-width: 680px;
+    margin: 50px auto;
+    margin-left: 15px !important;
+    padding-left: 0 !important;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 25px
+  }
+
+  .video-container {
+    margin-left: 15px !important;
+    position: relative;
+    width: 350px;
+    flex-shrink: 0;
+    padding-bottom: 56.25%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    border-radius: 6px;
+  }
+
+  #buttonsContainer {
+    gap: 20px;
+  }
+
+  #rating-stars {
+    gap: 0.9rem;
+    font-size: 1.3rem;
+  }
+
+  #rating-stars {
+    margin-top: -20px;
+    font-size: 1.3rem;
+  }
 }

@@ -7,6 +7,11 @@
   font-family: Quicksand, sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden !important;
+}
+
 body {
   background-color: #ffedf3;
 }
@@ -69,38 +74,34 @@ body {
   margin-left: 3rem;
 }
 
-
 #leftBtn,
 #rightBtn {
   background: none;
-  border: none; 
-  color: #f8db27; 
+  border: none;
+  color: #f8db27;
   font-size: 2.6rem;
   cursor: pointer;
-  display: inline-flex; 
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.3s, transform 0.3s; 
+  transition: color 0.3s, transform 0.3s;
 }
-
 
 #leftBtn:hover,
 #rightBtn:hover {
   color: #f8db27;
-  transform: scale(1); 
+  transform: scale(1);
 }
-
 
 #leftBtn:active,
 #rightBtn:active {
-  color: #0392dd; 
+  color: #0392dd;
 }
-
 
 #leftBtn {
   position: absolute;
-  left: 6rem; 
-  top: 72%; 
+  left: 6rem;
+  top: 72%;
   transform: translateY(-30%);
 }
 
