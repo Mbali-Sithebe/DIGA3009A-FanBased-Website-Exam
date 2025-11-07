@@ -37,27 +37,40 @@
     <link rel="stylesheet" href="./charactersPhr.css" />
   </head>
   <body class="about">
-    <!-- JavaScrip Generated Navigation Bar -->
+    <!-- JavaScript Generated Navigation Bar -->
     <header>
       <section id="navigation-bar">
         <nav>
-          <!-- Simpsons Logo -->
           <h1 class="logo">
             <span class="top-text">D’OH</span><br />
             <span class="bottom-text">SPRINGFIELD</span>
           </h1>
 
-          <!-- Menu container for JS-generated menu -->
+          <!-- Hamburger Icon -->
+          <button id="hamburger" aria-label="Open Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <!-- Close Button -->
+          <button id="close-menu" aria-label="Close Menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <!-- Desktop  Main Menu -->
+          <aside id="menu-container" role="navigation" aria-label="Main Menu">
+            <!-- JS populates desktop menu -->
+          </aside>
+
+          <!-- Responsive Design Dropdown Menu -->
           <aside
-            id="menu-container"
+            id="dropdown-container"
             role="navigation"
-            aria-label="Main Menu"
+            aria-label="Mobile Menu"
           ></aside>
         </nav>
       </section>
     </header>
 
-    <!-- Main Content -->
     <!-- Character Phrases Section -->
     <section id="characterPhrases">
       <h1 class="section-title">Simpsons Character Quotes</h1>
