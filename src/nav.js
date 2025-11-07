@@ -1,6 +1,4 @@
-// 1. Generating Navigation Bar
-
-// Array list of the nav menu
+// 1. Navigation Menu Array
 const menuItems = [
   { name: "Home", href: "index.html" },
   { name: "About", href: "about/about.html" },
@@ -10,15 +8,16 @@ const menuItems = [
   { name: "CharactersPhrases", href: "characters-phrases/charactersPhr.html" }, // hidden page
 ];
 
-// Function to generate the nav menu
+// 2. Initialise Menu Function
 function initialiseMenu(currentPage) {
   const container = document.querySelector("#menu-container");
+  container.innerHTML = "";
+
   const ul = document.createElement("ul");
   ul.classList.add("menu");
 
-  for (let menuItem of menuItems) {
-    // Skip CharactersPhrases — keep it hidden from the nav
-    if (menuItem.name === "CharactersPhrases") continue;
+  menuItems.forEach((menuItem) => {
+    if (menuItem.name === "CharactersPhrases") return;
 
     const li = document.createElement("li");
     li.classList.add("menu-item");
@@ -27,14 +26,17 @@ function initialiseMenu(currentPage) {
       const a = document.createElement("a");
       a.innerText = menuItem.name;
 
-      // Adjust relative path for subfolders
+      // Adjusting relative path for subfolders
       let relativeHref = menuItem.href;
+      const pathFolders = [
+        "/about/",
+        "/characters/",
+        "/episodes/",
+        "/adaptation/",
+        "/characters-phrases/",
+      ];
       if (
-        window.location.pathname.includes("/about/") ||
-        window.location.pathname.includes("/characters/") ||
-        window.location.pathname.includes("/episodes/") ||
-        window.location.pathname.includes("/adaptation/") ||
-        window.location.pathname.includes("/characters-phrases/")
+        pathFolders.some((folder) => window.location.pathname.includes(folder))
       ) {
         relativeHref = "../" + menuItem.href;
       }
@@ -47,15 +49,51 @@ function initialiseMenu(currentPage) {
     }
 
     ul.appendChild(li);
-  }
+  });
 
   container.appendChild(ul);
 }
 
-// Detect current page
+// 3. Detecting the current page
 const path = window.location.pathname.toLowerCase();
 if (path.includes("about")) initialiseMenu("About");
 else if (path.includes("characters")) initialiseMenu("Characters");
 else if (path.includes("episodes")) initialiseMenu("Episodes");
 else if (path.includes("adaptation")) initialiseMenu("Adaptation");
 else initialiseMenu("Home");
+
+// 4. Responsive Hamburger Toggle Menu
+const hamburger = document.getElementById("hamburger");
+const closeMenu = document.getElementById("close-menu");
+const menuContainer = document.getElementById("menu-container");
+
+function openMenu() {
+  menuContainer.classList.add("dropdown");
+  hamburger.style.display = "none";
+  closeMenu.style.display = "block";
+}
+
+function closeMenuFunc() {
+  menuContainer.classList.remove("dropdown");
+  closeMenu.style.display = "none";
+  hamburger.style.display = "block";
+}
+
+hamburger.addEventListener("click", openMenu);
+closeMenu.addEventListener("click", closeMenuFunc);
+
+// 5. Ensuring icons appear only on small screens
+function handleResize() {
+  if (window.innerWidth <= 768) {
+    hamburger.style.display = "block";
+    closeMenu.style.display = "none";
+    menuContainer.classList.remove("dropdown");
+  } else {
+    hamburger.style.display = "none";
+    closeMenu.style.display = "none";
+    menuContainer.classList.remove("dropdown");
+  }
+}
+
+window.addEventListener("resize", handleResize);
+window.addEventListener("load", handleResize);

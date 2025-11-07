@@ -37,7 +37,6 @@
     <div class="bg-home"></div>
     <div class="bg-overlay"></div>
 
-    <!-- Navigation Bar -->
     <header>
       <section id="navigation-bar">
         <nav>
@@ -46,11 +45,17 @@
             <span class="bottom-text">SPRINGFIELD</span>
           </h1>
 
-          <aside
-            id="menu-container"
-            role="navigation"
-            aria-label="Main Menu"
-          ></aside>
+          <!-- Hamburger Icon -->
+          <button id="hamburger" aria-label="Open Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <!-- Dropdown Navigation -->
+          <button id="close-menu" aria-label="Close Menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <aside id="menu-container" role="navigation" aria-label="Main Menu">
+          </aside>
         </nav>
       </section>
     </header>
