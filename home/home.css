@@ -12,7 +12,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 110%;
+  height: 100vh;
   background-image: url("../images/wall-1.jpeg");
   background-size: cover;
   background-position: center;
@@ -27,7 +27,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 110%;
+  height: 100vh;
   background-color: rgba(171, 239, 253, 0.3);
   z-index: -1;
   pointer-events: none;
@@ -64,9 +64,10 @@
 }
 
 #menu-container ul.menu {
+  margin-left: 15rem !important;
   display: flex;
   list-style: none;
-  gap: 5rem;
+  gap: 5rem !important;
   margin: 0;
   padding: 0;
   font-size: 1.2rem;
@@ -76,14 +77,18 @@
 #menu-container ul.menu li.menu-item a {
   text-decoration: none;
   color: #434242;
-}
-
-#menu-container ul.menu li.menu-item.active {
-  color: #00a4fc;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 #menu-container ul.menu li.menu-item a:hover {
   color: #00a4fc;
+}
+
+#menu-container ul.menu li.menu-item.active a {
+  color: #00a4fc !important;
+  font-weight: bold !important;
+  pointer-events: none;
 }
 
 .logo {
@@ -390,6 +395,8 @@ footer p {
   display: none;
 }
 
+/********************************  Responsive Design Start Here  ********************************/
+
 @media screen and (max-width: 768px) {
   #menu-container ul.menu {
     display: none;
@@ -405,7 +412,7 @@ footer p {
 
   #close-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 3rem;
     right: 5rem;
     font-size: 1.7rem;
@@ -414,25 +421,51 @@ footer p {
     z-index: 10003;
   }
 
-  #menu-container.dropdown {
-    display: block;
-    position: absolute;
+  #dropdown-container {
+    display: none;
+    position: fixed;
     top: 0;
     right: 0;
     width: 40%;
-    height: 100vh !important;
+    height: 100vh;
     background-color: #fcbfc7;
     padding: 5rem 2rem 2rem 2rem;
     box-shadow: -2px 0 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    flex-direction: column;
+    overflow-y: auto;
   }
 
-  #menu-container.dropdown ul.menu {
+  #dropdown-container.dropdown {
+    display: flex;
+  }
+
+  #dropdown-container ul.menu {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    padding-top: 1rem;
-    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-weight: bold;
+  }
+
+  #dropdown-container ul.menu li.menu-item a {
+    text-decoration: none;
+    color: #434242;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  #dropdown-container ul.menu li.menu-item:not(.active) a:hover {
+    color: #0392dd;
+  }
+
+  #dropdown-container ul.menu li.menu-item.active a {
+    color: #0392dd !important;
+    font-weight: bold !important;
+    pointer-events: none;
   }
 
   /********************************  Responsive Design Content  ********************************/

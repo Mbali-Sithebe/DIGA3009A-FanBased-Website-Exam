@@ -138,3 +138,60 @@ body {
   color: #fff;
   font-weight: 600;
 }
+
+/*******************************  Responsive Design  ********************************/
+
+@media screen and (max-width: 768px) {
+  #simpsonsContent {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  #textHolder {
+    flex: 1;
+    width: 100%;
+    text-align: left;
+  }
+
+  #textHolder h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    width: 100%;
+  }
+
+  #textHolder p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    width: 200%;
+  }
+
+  #simpsonsContent #image img {
+    width: 70%;
+    height: 275px;
+    border-radius: 4px;
+    margin-top: -20px !important;
+    margin-left: 13rem;
+  }
+
+  /*******************************  Achivement Box  ********************************/
+
+  #publishing li h2 {
+    font-size: 1.5em;
+  }
+
+  #publishing li p {
+    font-size: 1em;
+  }
+
+  .box-holder {
+    gap: 16px;
+
+    width: 85%;
+    max-width: 1000px;
+  }
+}
