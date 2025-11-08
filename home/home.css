@@ -212,6 +212,28 @@
   background-color: #0392dd;
 }
 
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}
+
+.rotationButton button {
+  animation: heartbeat 1.5s infinite ease-in-out;
+  transform-origin: center;
+}
+
 .border-svg {
   position: absolute;
   top: 0;
