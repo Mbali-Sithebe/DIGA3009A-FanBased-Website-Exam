@@ -212,7 +212,6 @@
   background-color: #0392dd;
 }
 
-
 @keyframes heartbeat {
   0%,
   100% {
@@ -243,8 +242,8 @@
 }
 
 .border-svg circle {
-  stroke-dasharray: 145;
-  stroke-dashoffset: 145;
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
   animation: spin 2s linear infinite;
 }
 
